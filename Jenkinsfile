@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Info') {
+            steps {
+                echo 'This is Info'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Build in progress'
