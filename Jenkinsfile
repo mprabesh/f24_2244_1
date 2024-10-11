@@ -3,8 +3,6 @@ pipeline {
     stages {
         stage('Info') {
             steps {
-                export varName=BUILD_NUMBER
-                echo '${'$varName'}'
                 echo 'This is Info'
             }
         }
