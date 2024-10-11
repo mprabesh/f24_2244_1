@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Info') {
             steps {
+                echo "Job: ${JOB_NAME} is building on branch ${BRANCH_NAME} and build-id is ${BUILD_ID}"
                 echo 'This is Info'
             }
         }
