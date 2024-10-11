@@ -3,25 +3,26 @@ pipeline {
     stages {
         stage('Info') {
             steps {
-                echo 'This is Info'
+                echo 'Job: ${JOB_NAME} is building on branch ${BRANCH_NAME} and build-id is ${BUILD_ID}'
+                sh 'sleep 5'
             }
         }
         stage('Build') {
             steps {
-                echo 'Build in progress'
+                echo 'this is build stage'
                 sh 'sleep 5'
             }
         }
-         stage('Test') {
+        stage('Test') {
             steps {
-                echo 'Testing in progress'
+                echo 'this is test stage'
                 sh 'sleep 5'
             }
         }
-         stage('Deploy') {
+        stage('Deploy') {
             steps {
-                echo 'Deployment in progress'
-                sh 'sleep 7'
+                echo 'this is deploy stage'
+                sh 'sleep 5'
             }
         }
     }
