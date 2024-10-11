@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Info') {
             steps {
-                echo 'hello world'
+                echo 'Job: ${JOB_NAME} is building on branch ${BRANCH_NAME} and build-id is ${BUILD_ID}'
                 sh 'sleep 5'
             }
         }
